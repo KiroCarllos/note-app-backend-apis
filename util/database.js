@@ -4,6 +4,7 @@ const DBConcction = callback => { mongoose.connect(process.env.MONGO_URL).then( 
          console.log("DB Connected!!")
          callback()
     }).catch(err => {
+        console.log("DB Not Connected!!");
         console.log(err);
     })
 }
